@@ -17,7 +17,7 @@ function home() {
 
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <img
-            src="/hero.png"
+            src="hero.png"
             alt="hero img"
             className="w-full max-w-[300px] md:max-w-[450px] drop-shadow-[0_0_35px_rgba(59,130,246,0.3)]"
           />

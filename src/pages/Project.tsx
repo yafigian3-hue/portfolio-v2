@@ -18,7 +18,7 @@ function project() {
             hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] flex flex-col h-full"
           >
             <img
-              src="/Screenshot_2025-12-13_15-01-39.png"
+              src="Screenshot_2025-12-13_15-01-39.png"
               className="w-full h-100 object-cover"
               alt="Landing Page"
             />
@@ -66,7 +66,7 @@ function project() {
             hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] flex flex-col h-full"
           >
             <img
-              src="/Screenshot_2025-12-13_15-44-25.png"
+              src="Screenshot_2025-12-13_15-44-25.png"
               className="w-full h-100 object-cover"
               alt="fix navbar and grid error"
             />
@@ -113,7 +113,7 @@ function project() {
             hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] flex flex-col h-full"
           >
             <img
-              src="/Screenshot_2025-12-18_21-24-53.png"
+              src="Screenshot_2025-12-18_21-24-53.png"
               className="w-full h-100 object-cover"
               alt="Form Validation"
             />
@@ -160,7 +160,7 @@ function project() {
             hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] flex flex-col h-full"
           >
             <img
-              src="/Screenshot_2025-12-18_21-23-22.png"
+              src="Screenshot_2025-12-18_21-23-22.png"
               className="w-full h-100 object-cover"
               alt="Todo List"
             />

@@ -32,7 +32,7 @@ function about() {
         </div>
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <img
-            src="/about.png"
+            src="about.png"
             alt="about img"
             className="w-full max-w-[350px] md:max-w-[400px] drop-shadow-[0_0_35px_rgba(59,130,246,0.3)]"
           />
