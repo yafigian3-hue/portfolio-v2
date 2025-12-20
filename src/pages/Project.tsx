@@ -32,13 +32,13 @@ function project() {
                 UX and efficient WhatsApp CTAs. Proven coding and targeted
                 copywriting skills
               </p>
-              <div className="flex justify-center mt-2 items-center gap-2 text-center">
+              <div className="flex justify-center mt-2 items-center gap-1 text-center">
                 {/* Source Code */}
                 <a
                   href="https://github.com/yafigian3-hue/Landing-Page-UMKM?tab=readme-ov-file"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
+                  className="flex items-center gap-1 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
                 >
                   <Github size={18} />
                    Source Code
@@ -79,13 +79,13 @@ function project() {
                 and JavaScript. Focus on responsiveness, design consistency, and
                 optimal user experience across devices
               </p>
-              <div className="flex justify-center mt-3 items-center gap-2 text-center">
+              <div className="flex justify-center mt-3 items-center gap-1 text-center">
                 {/* Source Code */}
                 <a
                   href="https://github.com/yafigian3-hue/Studi-Kasus-Solusi-Perbaikan-Layout-Responsif-Navbar/tree/main"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
+                  className="flex items-center gap-1 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
                 >
                   <Github size={18} />
                   Source Code
@@ -126,13 +126,13 @@ function project() {
                 validation, error messages, and prevents form submission if
                 input is invalid
               </p>
-              <div className="flex justify-center mt-3 items-center gap-2 text-center">
+              <div className="flex justify-center mt-3 items-center gap-1 text-center">
                 {/* Source Code */}
                 <a
                   href="https://github.com/yafigian3-hue/form-validation?tab=readme-ov-file"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
+                  className="flex items-center gap-1 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
                 >
                   <Github size={18} />
                   Source Code
@@ -173,13 +173,13 @@ function project() {
                 localStorage, Array of Objects, Looping, Event Delegation, and
                 state-based Dynamic UI Update.
               </p>
-              <div className="flex justify-center mt-3 items-center gap-2 text-center">
+              <div className="flex justify-center mt-3 items-center gap-1 text-center">
                 {/* Source Code */}
                 <a
                   href="https://github.com/yafigian3-hue/Todo-list"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
+                  className="flex items-center gap-1 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
                 >
                   <Github size={18} />
                   Source Code

@@ -9,16 +9,19 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
+    <div className="relative min-h-[100dvh] overflow-hidden">
       <BackgroundGradient />
-      <Navbar />
-      <Home />
-      <About />
-      <Stack />
-      <Project />
-      <Contact />
-      <Footer />
-    </>
+
+      <div className="relative z-10">
+        <Navbar />
+        <Home />
+        <About />
+        <Project />
+        <Stack />
+        <Contact />
+        <Footer />
+      </div>
+    </div>
   );
 }
 
