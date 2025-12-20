@@ -32,16 +32,18 @@ function project() {
                 UX and efficient WhatsApp CTAs. Proven coding and targeted
                 copywriting skills
               </p>
-              <div className="flex justify-center mt-2 items-center gap-1 text-center">
+              <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
                 {/* Source Code */}
                 <a
                   href="https://github.com/yafigian3-hue/Landing-Page-UMKM?tab=readme-ov-file"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+               bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+               transition hover:bg-blue-400"
                 >
                   <Github size={18} />
-                   Source Code
+                  Source Code
                 </a>
 
                 {/* Live Demo */}
@@ -49,7 +51,9 @@ function project() {
                   href="https://yafigian3-hue.github.io/Landing-Page-UMKM/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-between gap-2 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+               bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+               transition hover:bg-blue-400"
                 >
                   <Play size={18} />
                   Live Demo
@@ -79,13 +83,15 @@ function project() {
                 and JavaScript. Focus on responsiveness, design consistency, and
                 optimal user experience across devices
               </p>
-              <div className="flex justify-center mt-3 items-center gap-1 text-center">
+              <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
                 {/* Source Code */}
                 <a
                   href="https://github.com/yafigian3-hue/Studi-Kasus-Solusi-Perbaikan-Layout-Responsif-Navbar/tree/main"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+               bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+               transition hover:bg-blue-400"
                 >
                   <Github size={18} />
                   Source Code
@@ -96,7 +102,9 @@ function project() {
                   href="https://yafigian3-hue.github.io/Studi-Kasus-Solusi-Perbaikan-Layout-Responsif-Navbar/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-between gap-2 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+               bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+               transition hover:bg-blue-400"
                 >
                   <Play size={18} />
                   Live Demo
@@ -126,13 +134,15 @@ function project() {
                 validation, error messages, and prevents form submission if
                 input is invalid
               </p>
-              <div className="flex justify-center mt-3 items-center gap-1 text-center">
+              <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
                 {/* Source Code */}
                 <a
                   href="https://github.com/yafigian3-hue/form-validation?tab=readme-ov-file"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+               bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+               transition hover:bg-blue-400"
                 >
                   <Github size={18} />
                   Source Code
@@ -143,7 +153,9 @@ function project() {
                   href="https://yafigian3-hue.github.io/form-validation/index.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-between gap-2 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+               bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+               transition hover:bg-blue-400"
                 >
                   <Play size={18} />
                   Live Demo
@@ -173,13 +185,15 @@ function project() {
                 localStorage, Array of Objects, Looping, Event Delegation, and
                 state-based Dynamic UI Update.
               </p>
-              <div className="flex justify-center mt-3 items-center gap-1 text-center">
+              <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
                 {/* Source Code */}
                 <a
                   href="https://github.com/yafigian3-hue/Todo-list"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+               bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+               transition hover:bg-blue-400"
                 >
                   <Github size={18} />
                   Source Code
@@ -190,7 +204,9 @@ function project() {
                   href="https://yafigian3-hue.github.io/Todo-list/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-between gap-2 rounded-lg bg-[#3B82F6] px-4 py-2 font-mono text-sm text-white transition hover:bg-blue-400"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+               bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+               transition hover:bg-blue-400"
                 >
                   <Play size={18} />
                   Live Demo

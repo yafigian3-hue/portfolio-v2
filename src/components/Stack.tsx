@@ -23,7 +23,7 @@ const techStack = [
 
 function stack() {
   return (
-    <div className="mt-4">
+    <div className="mt-20">
       <h2 className="text-4xl text-center md:text-5xl text-[#3B82F6] font-mono font-bold">
         Tech Stack
       </h2>
