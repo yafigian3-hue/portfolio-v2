@@ -116,7 +116,7 @@ export default function Navbar() {
                 Yafi Gian · Web Developer
               </p>
               <p className="mt-1 opacity-80">
-                © 2025 — Ultra-fast, lightweight websites.
+                @2025 | MyReact. All rights reserved
               </p>
 
               <div className="flex justify-center mt-3 items-center gap-2 text-center">
