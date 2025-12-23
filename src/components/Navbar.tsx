@@ -112,9 +112,6 @@ export default function Navbar() {
             ))}
 
             <div className="fixed bottom-5 left-0 right-0 p-4 text-center font-mono text-sm text-gray-600">
-              <p className="font-medium hover:text-blue-500 transition">
-                Yafi Gian · Web Developer
-              </p>
               <p className="mt-1 opacity-80">
                 @2025 | MyReact. All rights reserved
               </p>
