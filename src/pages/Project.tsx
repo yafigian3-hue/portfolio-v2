@@ -215,6 +215,58 @@ function project() {
             </div>
           </div>
         </div>
+
+        {/* project 5 */}
+        <div className="min-w-full p-2">
+          <div
+            className="bg-transparent rounded-xl max-w-sm mx-auto overflow-hidden shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] 
+    hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] flex flex-col h-full"
+          >
+            <img
+              src="Screenshot_2026-02-26_22-25-53.png"
+              className="w-full h-100 object-cover"
+              alt="Dashboard Keuangan"
+            />
+            <div className="p-6 text-center">
+              <h3 className="text-xl font-mono text-gray-400 mb-2">
+                Dashboard Keuangan
+              </h3>
+              <p className="text-gray-400 text-center font-mono text-base mt-4">
+                Personal finance dashboard built with vanilla JavaScript.
+                Features include income & expense tracking, dynamic balance
+                calculation, localStorage data persistence, and responsive UI
+                design.
+              </p>
+              <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
+                {/* Source Code */}
+                <a
+                  href="https://github.com/yafigian3-hue/dashboard-keuangan-vanilla"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+          transition hover:bg-blue-400"
+                >
+                  <Github size={18} />
+                  Source Code
+                </a>
+
+                {/* Live Demo */}
+                <a
+                  href="https://yafigian3-hue.github.io/dashboard-keuangan-vanilla/dashboard.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+          transition hover:bg-blue-400"
+                >
+                  <Play size={18} />
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
