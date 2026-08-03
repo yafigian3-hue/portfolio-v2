@@ -14,6 +14,306 @@ function project() {
         {/* project 1 */}
         <div className="min-w-full p-2">
           <div
+            className="bg-transparent rounded-xl max-w-sm mx-auto overflow-hidden 
+    shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 
+    hover:-translate-y-2 hover:scale-[1.02] 
+    hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] 
+    flex flex-col h-full"
+          >
+            <img
+              src="Screenshot 2026-08-02 202043.png"
+              className="w-full h-100 object-cover"
+              alt="Movie Explorer"
+            />
+
+            <div className="p-6 text-center">
+              <h3 className="text-xl font-mono text-gray-400 mb-1">
+                Movie Explorer
+              </h3>
+
+              <span className="text-xs text-blue-400 font-mono block mb-3">
+                React • Tailwind CSS • Node.js • Express • PostgreSQL • Prisma •
+                TMDB API
+              </span>
+
+              <p className="text-gray-400 text-center font-mono text-base mt-4">
+                Full stack movie discovery app powered by the TMDB API. Features
+                an interactive hero banner with trailer playback, real-time
+                search, favorite & watchlist management, and watch history, all
+                backed by a REST API with PostgreSQL and Prisma ORM.
+              </p>
+
+              <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
+                {/* Source Code */}
+                <a
+                  href="https://github.com/yafigian3-hue/movie-explorer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+          transition hover:bg-blue-400"
+                >
+                  <Github size={18} />
+                  Source Code
+                </a>
+
+                {/* Live Demo */}
+                <a
+                  href="https://yafigian3-hue.github.io/movie-explorer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+          transition hover:bg-blue-400"
+                >
+                  <Play size={18} />
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* project 2 */}
+        <div className="min-w-full p-2">
+          <div
+            className="bg-transparent rounded-xl max-w-sm mx-auto overflow-hidden shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] 
+    hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] flex flex-col h-full"
+          >
+            <img
+              src="Screenshot_2026-03-01_20-31-59.png"
+              className="w-full h-100 object-cover"
+              alt="Weather App"
+            />
+            <div className="p-6 text-center">
+              <h3 className="text-xl font-mono text-gray-400 mb-1">
+                Weather App
+              </h3>
+
+              <span className="text-xs text-blue-400 font-mono block mb-3">
+                HTML • Tailwind CSS • JavaScript • API • Chart.js
+              </span>
+
+              <p className="text-gray-400 text-center font-mono text-base mt-4">
+                Weather forecast application using OpenWeather API. Features
+                real-time city search, dynamic temperature updates, weather
+                condition icons, and interactive temperature charts. Built with
+                vanilla JavaScript focusing on API integration and DOM
+                manipulation.
+              </p>
+
+              <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
+                {/* Source Code */}
+                <a
+                  href="https://github.com/yafigian3-hue/weather-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+          transition hover:bg-blue-400"
+                >
+                  <Github size={18} />
+                  Source Code
+                </a>
+
+                {/* Live Demo */}
+                <a
+                  href="https://yafigian3-hue.github.io/weather-app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+          transition hover:bg-blue-400"
+                >
+                  <Play size={18} />
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* project 3 */}
+        <div className="min-w-full p-2">
+          <div
+            className="bg-transparent rounded-xl max-w-sm mx-auto overflow-hidden shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] 
+    hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] flex flex-col h-full"
+          >
+            <img
+              src="Screenshot 2026-08-02 204031.png"
+              className="w-full h-100 object-cover"
+              alt="Dashboard Keuangan"
+            />
+            <div className="p-6 text-center">
+              <h3 className="text-xl font-mono text-gray-400 mb-1">
+                Dashboard Keuangan
+              </h3>
+
+              <span className="text-xs text-blue-400 font-mono block mb-3">
+                HTML • Tailwind CSS • JavaScript • LocalStorage • State
+                Management
+              </span>
+
+              <p className="text-gray-400 text-center font-mono text-base mt-4">
+                Personal finance dashboard built with vanilla JavaScript.
+                Features include income & expense tracking, dynamic balance
+                calculation, localStorage data persistence, and responsive UI
+                design.
+              </p>
+              <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
+                {/* Source Code */}
+                <a
+                  href="https://github.com/yafigian3-hue/dashboard-keuangan-vanilla"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+          transition hover:bg-blue-400"
+                >
+                  <Github size={18} />
+                  Source Code
+                </a>
+
+                {/* Live Demo */}
+                <a
+                  href="https://yafigian3-hue.github.io/dashboard-keuangan-vanilla/dashboard.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+          transition hover:bg-blue-400"
+                >
+                  <Play size={18} />
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* project 4 */}
+        <div className="min-w-full p-2">
+          <div
+            className="bg-transparent rounded-xl max-w-sm mx-auto overflow-hidden shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] 
+            hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] flex flex-col h-full"
+          >
+            <img
+              src="Screenshot_2025-12-18_21-23-22.png"
+              className="w-full h-100 object-cover"
+              alt="Todo List"
+            />
+            <div className="p-6 text-center">
+              <h3 className="text-xl font-mono text-gray-400 mb-1">
+                Todo List
+              </h3>
+
+              <span className="text-xs text-blue-400 font-mono block mb-3">
+                HTML • Tailwind CSS • JavaScript • LocalStorage • Event
+                Delegation
+              </span>
+
+              <p className="text-gray-400 text-center font-mono text-base mt-4">
+                Full featured todo list: DOM Selection, Event Listener,
+                localStorage, Array of Objects, Looping, Event Delegation, and
+                state-based Dynamic UI Update.
+              </p>
+              <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
+                {/* Source Code */}
+                <a
+                  href="https://github.com/yafigian3-hue/Todo-list"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+               bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+               transition hover:bg-blue-400"
+                >
+                  <Github size={18} />
+                  Source Code
+                </a>
+
+                {/* Live Demo */}
+                <a
+                  href="https://yafigian3-hue.github.io/Todo-list/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+               bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+               transition hover:bg-blue-400"
+                >
+                  <Play size={18} />
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* project 5 */}
+        <div className="min-w-full p-2">
+          <div
+            className="bg-transparent rounded-xl max-w-sm mx-auto overflow-hidden 
+    shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 
+    hover:-translate-y-2 hover:scale-[1.02] 
+    hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] 
+    flex flex-col h-full"
+          >
+            <img
+              src="chat.png"
+              className="w-full h-100 object-cover"
+              alt="Chat Filter App"
+            />
+
+            <div className="p-6 text-center">
+              <h3 className="text-xl font-mono text-gray-400 mb-1">
+                Chat Filter App
+              </h3>
+
+              <span className="text-xs text-blue-400 font-mono block mb-3">
+                HTML • Tailwind CSS • JavaScript
+              </span>
+
+              <p className="text-gray-400 text-center font-mono text-base mt-4">
+                Interactive chat filtering application that detects and filters
+                inappropriate words in real time. Features live input
+                validation, dynamic text updates, and responsive UI design.
+                Built to practice DOM manipulation and JavaScript event
+                handling.
+              </p>
+
+              <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
+                {/* Source Code */}
+                <a
+                  href="https://github.com/yafigian3-hue/chat-filter-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+          transition hover:bg-blue-400"
+                >
+                  <Github size={18} />
+                  Source Code
+                </a>
+
+                {/* Live Demo */}
+                <a
+                  href="https://yafigian3-hue.github.io/chat-filter-app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg 
+          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
+          transition hover:bg-blue-400"
+                >
+                  <Play size={18} />
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* project 6 */}
+        <div className="min-w-full p-2">
+          <div
             className="bg-transparent rounded-xl max-w-sm mx-auto overflow-hidden shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] 
             hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] flex flex-col h-full"
           >
@@ -68,63 +368,7 @@ function project() {
           </div>
         </div>
 
-        {/* project 2 */}
-        <div className="min-w-full p-2">
-          <div
-            className="bg-transparent rounded-xl max-w-sm mx-auto overflow-hidden shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] 
-            hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] flex flex-col h-full"
-          >
-            <img
-              src="Screenshot_2025-12-13_15-44-25.png"
-              className="w-full h-100 object-cover"
-              alt="fix navbar and grid error"
-            />
-            <div className="p-6 text-center">
-              <h3 className="text-xl font-mono text-gray-400 mb-1">
-                fix navbar and grid error
-              </h3>
-
-              <span className="text-xs text-blue-400 font-mono block mb-3">
-                HTML • TailwindCSS • JavaScript • Responsive Layout
-              </span>
-
-              <p className="text-gray-400 text-center font-mono text-base mt-4">
-                Fix issues with navbar and grid layouts using HTML, TailwindCSS,
-                and JavaScript. Focus on responsiveness, design consistency, and
-                optimal user experience across devices
-              </p>
-              <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
-                {/* Source Code */}
-                <a
-                  href="https://github.com/yafigian3-hue/Studi-Kasus-Solusi-Perbaikan-Layout-Responsif-Navbar/tree/main"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-lg 
-               bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
-               transition hover:bg-blue-400"
-                >
-                  <Github size={18} />
-                  Source Code
-                </a>
-
-                {/* Live Demo */}
-                <a
-                  href="https://yafigian3-hue.github.io/Studi-Kasus-Solusi-Perbaikan-Layout-Responsif-Navbar/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-lg 
-               bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
-               transition hover:bg-blue-400"
-                >
-                  <Play size={18} />
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* project 3 */}
+        {/* project 7 */}
         <div className="min-w-full p-2">
           <div
             className="bg-transparent rounded-xl max-w-sm mx-auto overflow-hidden shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] 
@@ -180,35 +424,35 @@ function project() {
           </div>
         </div>
 
-        {/* project 4 */}
+        {/* project 8 */}
         <div className="min-w-full p-2">
           <div
             className="bg-transparent rounded-xl max-w-sm mx-auto overflow-hidden shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] 
             hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] flex flex-col h-full"
           >
             <img
-              src="Screenshot_2025-12-18_21-23-22.png"
+              src="Screenshot_2025-12-13_15-44-25.png"
               className="w-full h-100 object-cover"
-              alt="Todo List"
+              alt="fix navbar and grid error"
             />
             <div className="p-6 text-center">
               <h3 className="text-xl font-mono text-gray-400 mb-1">
-                Todo List
+                fix navbar and grid error
               </h3>
 
               <span className="text-xs text-blue-400 font-mono block mb-3">
-                HTML • CSS • JavaScript • LocalStorage • Event Delegation
+                HTML • TailwindCSS • JavaScript • Responsive Layout
               </span>
 
               <p className="text-gray-400 text-center font-mono text-base mt-4">
-                Full featured todo list: DOM Selection, Event Listener,
-                localStorage, Array of Objects, Looping, Event Delegation, and
-                state-based Dynamic UI Update.
+                Fix issues with navbar and grid layouts using HTML, TailwindCSS,
+                and JavaScript. Focus on responsiveness, design consistency, and
+                optimal user experience across devices
               </p>
               <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
                 {/* Source Code */}
                 <a
-                  href="https://github.com/yafigian3-hue/Todo-list"
+                  href="https://github.com/yafigian3-hue/Studi-Kasus-Solusi-Perbaikan-Layout-Responsif-Navbar/tree/main"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 rounded-lg 
@@ -221,128 +465,12 @@ function project() {
 
                 {/* Live Demo */}
                 <a
-                  href="https://yafigian3-hue.github.io/Todo-list/"
+                  href="https://yafigian3-hue.github.io/Studi-Kasus-Solusi-Perbaikan-Layout-Responsif-Navbar/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 rounded-lg 
                bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
                transition hover:bg-blue-400"
-                >
-                  <Play size={18} />
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* project 5 */}
-        <div className="min-w-full p-2">
-          <div
-            className="bg-transparent rounded-xl max-w-sm mx-auto overflow-hidden shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] 
-    hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] flex flex-col h-full"
-          >
-            <img
-              src="Screenshot_2026-02-26_22-25-53.png"
-              className="w-full h-100 object-cover"
-              alt="Dashboard Keuangan"
-            />
-            <div className="p-6 text-center">
-              <h3 className="text-xl font-mono text-gray-400 mb-1">
-                Dashboard Keuangan
-              </h3>
-
-              <span className="text-xs text-blue-400 font-mono block mb-3">
-                HTML • CSS • JavaScript • LocalStorage • State Management
-              </span>
-
-              <p className="text-gray-400 text-center font-mono text-base mt-4">
-                Personal finance dashboard built with vanilla JavaScript.
-                Features include income & expense tracking, dynamic balance
-                calculation, localStorage data persistence, and responsive UI
-                design.
-              </p>
-              <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
-                {/* Source Code */}
-                <a
-                  href="https://github.com/yafigian3-hue/dashboard-keuangan-vanilla"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-lg 
-          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
-          transition hover:bg-blue-400"
-                >
-                  <Github size={18} />
-                  Source Code
-                </a>
-
-                {/* Live Demo */}
-                <a
-                  href="https://yafigian3-hue.github.io/dashboard-keuangan-vanilla/dashboard.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-lg 
-          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
-          transition hover:bg-blue-400"
-                >
-                  <Play size={18} />
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* project 6 */}
-        <div className="min-w-full p-2">
-          <div
-            className="bg-transparent rounded-xl max-w-sm mx-auto overflow-hidden shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] 
-    hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] flex flex-col h-full"
-          >
-            <img
-              src="Screenshot_2026-03-01_20-31-59.png"
-              className="w-full h-100 object-cover"
-              alt="Weather App"
-            />
-            <div className="p-6 text-center">
-              <h3 className="text-xl font-mono text-gray-400 mb-1">
-                Weather App
-              </h3>
-
-              <span className="text-xs text-blue-400 font-mono block mb-3">
-                HTML • CSS • JavaScript • API • Chart.js
-              </span>
-
-              <p className="text-gray-400 text-center font-mono text-base mt-4">
-                Weather forecast application using OpenWeather API. Features
-                real-time city search, dynamic temperature updates, weather
-                condition icons, and interactive temperature charts. Built with
-                vanilla JavaScript focusing on API integration and DOM
-                manipulation.
-              </p>
-
-              <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
-                {/* Source Code */}
-                <a
-                  href="https://github.com/yafigian3-hue/weather-app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-lg 
-          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
-          transition hover:bg-blue-400"
-                >
-                  <Github size={18} />
-                  Source Code
-                </a>
-
-                {/* Live Demo */}
-                <a
-                  href="https://yafigian3-hue.github.io/weather-app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-lg 
-          bg-[#3B82F6] px-3 py-2 font-mono text-sm text-white 
-          transition hover:bg-blue-400"
                 >
                   <Play size={18} />
                   Live Demo

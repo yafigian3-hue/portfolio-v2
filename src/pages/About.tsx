@@ -19,7 +19,7 @@ function about() {
           </p>
 
           <p className="text-sm md:text-lg font-mono text-gray-400 mt-8">
-            I work mainly with React, TypeScript, and Tailwind CSS to build
+            I work mainly with React, JavaScript, TypeScript, and Tailwind CSS to build
             modern frontend applications. I have a strong foundation in
             JavaScript and improve my skills by building real-world projects.
           </p>
