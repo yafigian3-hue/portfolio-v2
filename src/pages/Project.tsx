@@ -150,20 +150,19 @@ function project() {
               </h3>
 
               <span className="text-xs text-blue-400 font-mono block mb-3">
-                HTML • Tailwind CSS • JavaScript • LocalStorage • State
-                Management
+                Next.js • React • Prisma ORM • PostgreSQL • Tailwind CSS
               </span>
 
               <p className="text-gray-400 text-center font-mono text-base mt-4">
-                Personal finance dashboard built with vanilla JavaScript.
-                Features include income & expense tracking, dynamic balance
-                calculation, localStorage data persistence, and responsive UI
-                design.
+                A personal finance dashboard migrated from vanilla JavaScript to
+                Next.js. It features JWT authentication, protected routes,
+                transaction CRUD functionality, an interactive dashboard powered
+                by Chart.js, dark mode, and a responsive design.
               </p>
               <div className="bottom-0 mt-4 grid grid-cols-2 gap-2">
                 {/* Source Code */}
                 <a
-                  href="https://github.com/yafigian3-hue/dashboard-keuangan-vanilla"
+                  href="https://github.com/yafigian3-hue/dashboard-keuangan-nextjs"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 rounded-lg 
@@ -176,7 +175,7 @@ function project() {
 
                 {/* Live Demo */}
                 <a
-                  href="https://yafigian3-hue.github.io/dashboard-keuangan-vanilla/dashboard.html"
+                  href="https://dashboard-keuangan-nextjs-4olejfv8v-yafigian3-1101s-projects.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 rounded-lg 
