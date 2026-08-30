@@ -1,24 +1,18 @@
-import { Home, User, Folder, Mail } from "lucide-react";
+import { Home, User, Folder, Mail, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { FaWhatsapp } from "react-icons/fa";
-import { SiGithub } from "react-icons/si";
 
 const navLinks = [
-  { name: "Home", icon: Home, href: "#" },
-  { name: "About", icon: User, href: "#About" },
-  { name: "Projects", icon: Folder, href: "#Projects" },
-  { name: "Contact", icon: Mail, href: "#Contact" },
+  { name: "Home", icon: Home, href: "#home" },
+  { name: "About", icon: User, href: "#about" },
+  { name: "Projects", icon: Folder, href: "#projects" },
+  { name: "Contact", icon: Mail, href: "#contact" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = open ? "hidden" : "";
 
     return () => {
       document.body.style.overflow = "";
@@ -33,108 +27,100 @@ export default function Navbar() {
     };
 
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
     <>
       <header className="fixed top-0 z-40 w-full">
-        <nav className="mx-full flex h-16 max-w-full items-center justify-between px-10 md:px-20 inset-0 bg-black/30 backdrop-blur">
+        <nav className="flex h-16 items-center justify-between border-b border-white/5 bg-black/30 px-6 backdrop-blur-xl md:px-20">
+          {/* Logo */}
           <a
-            href="#"
-            className="text-3xl font-extrabold font-mono text-[#3B82F6] drop-shadow-[0_0_10px_rgba(59,130,246,0.8)] hover:text-[#478dff] transition-all duration-300"
+            href="#home"
+            className="font-mono text-2xl font-extrabold text-[#3B82F6] drop-shadow-[0_0_10px_rgba(59,130,246,0.8)] transition-all duration-300 hover:text-[#478dff] md:text-3xl"
           >
-            YD
+            YafiDEV
           </a>
 
-          {/* Desktop nav */}
-          <ul className="hidden md:flex items-center gap-8">
+          {/* Desktop Navigation */}
+          <ul className="hidden items-center gap-8 md:flex">
             {navLinks.map(({ name, icon: Icon, href }) => (
               <li key={name}>
                 <a
                   href={href}
-                  className="group relative flex items-center gap-2 text-slate-300 text-xl hover:text-white"
+                  className="group relative flex items-center gap-2 text-lg text-slate-300 transition-colors duration-300 hover:text-white"
                 >
-                  <Icon size={18} />
-                  {name}
-                  <span className="absolute -bottom-1 left-0 h-[3px] w-0 rounded-sm bg-[#3B82F6] transition-all duration-300 group-hover:w-full shadow-[0_0_10px_#3B82F6,0_0_20px_#3B82F6]" />
+                  <Icon size={20} className="text-[#3B82F6]" />
+                  <span>{name}</span>
+
+                  <span className="absolute -bottom-2 left-0 h-[2px] w-0 rounded-full bg-[#3B82F6] shadow-[0_0_10px_#3B82F6] transition-all duration-300 group-hover:w-full" />
                 </a>
               </li>
             ))}
           </ul>
 
-          {/* Hamburger */}
-          <button
-            className="md:hidden text-3xl text-slate-300 hover:text-white"
-            onClick={() => setOpen(true)}
-            aria-label="Open menu"
+          {/* Desktop CTA */}
+          <a
+            href="#contact"
+            className="hidden rounded-lg border border-[#3B82F6]/50 px-4 py-2 text-sm font-medium text-[#60A5FA] transition-all duration-300 hover:border-[#3B82F6] hover:bg-[#3B82F6]/10 hover:text-white hover:shadow-[0_0_15px_rgba(59,130,246,0.25)] md:block"
           >
-            ☰
+            Let's Talk
+          </a>
+
+          {/* Mobile Menu Button */}
+          <button
+            type="button"
+            className="rounded-lg p-2 text-slate-300 transition-colors duration-300 hover:bg-white/5 hover:text-white md:hidden"
+            onClick={() => setOpen((prev) => !prev)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+          >
+            {open ? <X size={28} /> : <Menu size={28} />}
           </button>
         </nav>
       </header>
 
-      {/* MOBILE MENU (DI LUAR HEADER) */}
+      {/* Mobile Navigation */}
       <div
-        className={`fixed inset-0 z-50 md:hidden transition-transform duration-300
-        ${open ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed inset-x-0 top-16 z-30 md:hidden ${
+          open ? "pointer-events-auto" : "pointer-events-none"
+        }`}
       >
         {/* Overlay */}
         <div
-          className="absolute inset-0 bg-black/50 md:hidden"
+          className={`fixed inset-0 top-16 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
+            open ? "opacity-100" : "opacity-0"
+          }`}
           onClick={() => setOpen(false)}
+          aria-hidden="true"
         />
 
-        {/* Menu panel */}
-        <aside className="absolute right-0 top-0 h-full w-1/2 bg-slate-900/95 p-6 backdrop-blur">
-          <button
-            className="absolute top-4 right-4 mb-6 px-5 text-3xl text-slate-300 hover:text-white"
-            onClick={() => setOpen(false)}
-          >
-            ☰
-          </button>
-
-          <ul className="space-y-6 mt-8 text-lg text-white">
+        {/* Menu Panel */}
+        <nav
+          className={`relative border-b border-[#3B82F6]/20 bg-black/30 px-6 py-6 shadow-[0_15px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-all duration-300 ${
+            open
+              ? "translate-y-0 opacity-100"
+              : "-translate-y-4 opacity-0"
+          }`}
+        >
+          <ul className="space-y-2">
             {navLinks.map(({ name, icon: Icon, href }) => (
               <li key={name}>
                 <a
                   href={href}
                   onClick={() => setOpen(false)}
-                  className="group relative flex items-center gap-3 text-slate-300 hover:text-white"
+                  className="flex items-center gap-4 rounded-lg px-4 py-3 text-lg text-slate-300 transition-all duration-300 hover:bg-[#3B82F6]/10 hover:text-white"
                 >
-                  <Icon size={18} />
+                  <Icon size={20} className="text-[#3B82F6]" />
                   <span>{name}</span>
-
-                  {/* underline */}
-                  <span className="absolute -bottom-1 left-0 h-[3px] w-0 rounded-sm bg-[#3B82F6] transition-all duration-300 group-hover:w-1/2 shadow-[0_0_10px_#3B82F6,0_0_20px_#3B82F6]" />
                 </a>
               </li>
             ))}
-
-            <div className="fixed bottom-5 left-0 right-0 p-4 text-center font-mono text-sm text-gray-600">
-              <p className="mt-1 opacity-80">
-                @2025 | MyReact. All rights reserved
-              </p>
-
-              <div className="flex justify-center mt-3 items-center gap-2 text-center">
-                <a
-                  href="https://wa.me/6283896738779"
-                  target="_blank"
-                  className="hover:text-[#25D366] transition-colors duration-300"
-                >
-                  <FaWhatsapp size={24} />
-                </a>
-                <a
-                  href="https://github.com/yafigian3-hue"
-                  target="_blank"
-                  className="hover:text-white transition-colors duration-300"
-                >
-                  <SiGithub size={24} />
-                </a>
-              </div>
-            </div>
           </ul>
-        </aside>
+        </nav>
       </div>
     </>
   );
