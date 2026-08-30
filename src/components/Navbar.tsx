@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-0 z-40 w-full">
-        <nav className="mx-full flex h-16 max-w-full items-center justify-between px-10 md:px-20 inset-0 bg-black/50 backdrop-blur">
+        <nav className="mx-full flex h-16 max-w-full items-center justify-between px-10 md:px-20 inset-0 bg-black/30 backdrop-blur">
           <a
             href="#"
             className="text-3xl font-extrabold font-mono text-[#3B82F6] drop-shadow-[0_0_10px_rgba(59,130,246,0.8)] hover:text-[#478dff] transition-all duration-300"
