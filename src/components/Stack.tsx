@@ -32,10 +32,7 @@ function stack() {
         {techStack.map(({ name, icon: Icon, color }) => (
           <div
             key={name}
-            className="group relative flex items-center justify-center rounded-xl 
-                       w-auto p-5 h-12 gap-1 grid-cols-3
-                     border-[#3B82F6] border-[1px] shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] 
-                       hover:shadow-[0_0_35px_rgba(59,130,246,0.7)]"
+            className="group relative flex items-center justify-center rounded-xl w-auto p-5 h-12 gap-1 grid-cols-3 border-[#3B82F6] border-[1px] shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_35px_rgba(59,130,246,0.7)]"
           >
             <Icon
               style={{ color: color }}

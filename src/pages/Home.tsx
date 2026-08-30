@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useInView } from "../hooks/useInView";
 
 const TYPING_TEXTS = [
   "I build modern, responsive, and user-friendly web experiences with React and modern web technologies.",
@@ -13,7 +14,8 @@ function useTypewriterLoop(
     deletingSpeed = 20,
     pauseAfterTyping = 1800,
     pauseAfterDeleting = 400,
-    startDelay = 1300, // delay agar mulai mengetik setelah entrance animation selesai
+    enabled = true,
+    startDelay = 600,
   } = {},
 ) {
   const [displayed, setDisplayed] = useState("");
@@ -22,9 +24,10 @@ function useTypewriterLoop(
   const [started, setStarted] = useState(false);
 
   useEffect(() => {
+    if (!enabled) return;
     const t = setTimeout(() => setStarted(true), startDelay);
     return () => clearTimeout(t);
-  }, [startDelay]);
+  }, [enabled, startDelay]);
 
   useEffect(() => {
     if (!started) return;
@@ -69,7 +72,15 @@ function useTypewriterLoop(
 }
 
 function Home() {
-  const displayed = useTypewriterLoop(TYPING_TEXTS);
+  // threshold rendah karena Hero selalu terlihat penuh saat halaman dibuka
+  const { ref: contentRef, inView: contentInView } =
+    useInView<HTMLDivElement>(0.1);
+  const { ref: visualRef, inView: visualInView } =
+    useInView<HTMLDivElement>(0.1);
+
+  const displayed = useTypewriterLoop(TYPING_TEXTS, {
+    enabled: contentInView,
+  });
 
   return (
     <main
@@ -79,31 +90,50 @@ function Home() {
       <section className="mx-auto flex min-h-[calc(100vh-5rem)] max-w-6xl items-start pt-10 md:items-center md:pt-0">
         <div className="flex w-full flex-col items-center gap-12 md:flex-row md:items-center md:justify-between md:gap-8">
           {/* Hero Content */}
-          <div className="w-full max-w-2xl text-center md:w-1/2 md:text-left">
+          <div
+            ref={contentRef}
+            className="w-full max-w-2xl text-center md:w-1/2 md:text-left"
+          >
             <p
-              className="mb-3 origin-left font-mono text-sm font-medium tracking-[0.25em] text-[#3B82F6] uppercase opacity-0 [animation:fadeUp_0.6s_ease-out_forwards] md:text-base"
-              style={{ animationDelay: "0.1s" }}
+              className={`mb-3 font-mono text-sm font-medium tracking-[0.25em] text-[#3B82F6] uppercase transition-all duration-700 ease-out md:text-base ${
+                contentInView
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-6 opacity-0"
+              }`}
+              style={{ transitionDelay: contentInView ? "100ms" : "0ms" }}
             >
               Hi, I'm
             </p>
 
             <h1
-              className="font-sans text-5xl font-extrabold tracking-tight text-white opacity-0 [animation:fadeUp_0.7s_ease-out_forwards] sm:text-6xl md:text-6xl lg:text-7xl"
-              style={{ animationDelay: "0.25s" }}
+              className={`font-sans text-5xl font-extrabold tracking-tight text-white transition-all duration-700 ease-out sm:text-6xl md:text-6xl lg:text-7xl ${
+                contentInView
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-6 opacity-0"
+              }`}
+              style={{ transitionDelay: contentInView ? "220ms" : "0ms" }}
             >
               Yafi<span className="text-[#3B82F6]">DEV</span>
             </h1>
 
             <h2
-              className="mt-3 font-sans text-2xl font-semibold text-slate-300 opacity-0 [animation:fadeUp_0.7s_ease-out_forwards] sm:text-3xl md:text-3xl"
-              style={{ animationDelay: "0.4s" }}
+              className={`mt-3 font-sans text-2xl font-semibold text-slate-300 transition-all duration-700 ease-out sm:text-3xl md:text-3xl ${
+                contentInView
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-6 opacity-0"
+              }`}
+              style={{ transitionDelay: contentInView ? "340ms" : "0ms" }}
             >
               Frontend Developer
             </h2>
 
             <p
-              className="mx-auto mt-5 min-h-[3.5rem] max-w-xl text-base leading-relaxed text-slate-400 opacity-0 [animation:fadeUp_0.7s_ease-out_forwards] sm:text-lg md:mx-0 md:min-h-[3rem]"
-              style={{ animationDelay: "0.55s" }}
+              className={`mx-auto mt-5 min-h-[3.5rem] max-w-xl text-base leading-relaxed text-slate-400 transition-all duration-700 ease-out sm:text-lg md:mx-0 md:min-h-[3rem] ${
+                contentInView
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-6 opacity-0"
+              }`}
+              style={{ transitionDelay: contentInView ? "460ms" : "0ms" }}
             >
               {displayed}
               <span
@@ -114,8 +144,12 @@ function Home() {
 
             {/* CTA */}
             <div
-              className="mt-8 flex flex-col gap-3 opacity-0 [animation:fadeUp_0.7s_ease-out_forwards] sm:flex-row sm:justify-center md:justify-start"
-              style={{ animationDelay: "0.7s" }}
+              className={`mt-8 flex flex-col gap-3 transition-all duration-700 ease-out sm:flex-row sm:justify-center md:justify-start ${
+                contentInView
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-6 opacity-0"
+              }`}
+              style={{ transitionDelay: contentInView ? "580ms" : "0ms" }}
             >
               <a
                 href="#projects"
@@ -135,8 +169,11 @@ function Home() {
 
           {/* Hero Visual */}
           <div
-            className="flex w-full items-center justify-center opacity-0 [animation:scaleFadeIn_0.9s_ease-out_forwards] md:w-1/2 md:justify-end"
-            style={{ animationDelay: "0.3s" }}
+            ref={visualRef}
+            className={`flex w-full items-center justify-center transition-all duration-1000 ease-out md:w-1/2 md:justify-end ${
+              visualInView ? "scale-100 opacity-100" : "scale-90 opacity-0"
+            }`}
+            style={{ transitionDelay: visualInView ? "250ms" : "0ms" }}
           >
             <div className="relative flex items-center justify-center [animation:float_5s_ease-in-out_infinite]">
               {/* Blue Glow */}
