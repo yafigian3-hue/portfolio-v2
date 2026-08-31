@@ -2,7 +2,19 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export function useInView<T extends HTMLElement>(threshold = 0.15) {
+type UseInViewOptions = {
+  threshold?: number;
+  rootMargin?: string;
+};
+
+export function useInView<T extends HTMLElement>(
+  options: number | UseInViewOptions = 0.15,
+) {
+  const { threshold, rootMargin } =
+    typeof options === "number"
+      ? { threshold: options, rootMargin: "-15% 0px -15% 0px" }
+      : { threshold: 0.15, rootMargin: "-15% 0px -15% 0px", ...options };
+
   const ref = useRef<T>(null);
   const [inView, setInView] = useState(false);
 
@@ -17,12 +29,12 @@ export function useInView<T extends HTMLElement>(threshold = 0.15) {
           observer.unobserve(el);
         }
       },
-      { threshold },
+      { threshold, rootMargin },
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, rootMargin]);
 
   return { ref, inView };
 }

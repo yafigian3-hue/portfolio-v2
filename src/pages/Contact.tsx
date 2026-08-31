@@ -1,54 +1,96 @@
+"use client";
+
 import { FaWhatsapp } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
+import { useInView } from "../hooks/useInView";
 
-function contact() {
+function Contact() {
+  const { ref, inView } = useInView<HTMLElement>({
+    threshold: 0.4,
+    rootMargin: "-20% 0px -20% 0px",
+  });
+
   return (
     <section
-      id="Contact"
-      className="min-h-screen flex flex-col items-center justify-center px-6 py-20"
+      ref={ref}
+      id="contact"
+      className="flex min-h-screen flex-col items-center justify-center px-6 py-20"
     >
-      <h2 className="text-4xl text-center md:text-5xl text-[#3B82F6] font-mono font-bold">
-        Contact Me
-      </h2>
+      {/* Heading */}
+      <div
+        className={`text-center transition-all duration-700 ease-out ${
+          inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+        }`}
+      >
+        <p className="font-mono text-sm font-medium uppercase tracking-[0.25em] text-[#3B82F6]">
+          Get In Touch
+        </p>
 
-      <p className="max-w-2xl text-center mt-6 text-sm md:text-lg font-mono mb-12 text-gray-400">
+        <h2 className="mt-3 font-sans text-4xl font-extrabold tracking-tight text-white md:text-5xl">
+          Contact <span className="text-[#3B82F6]">Me</span>
+        </h2>
+      </div>
+
+      {/* Description */}
+      <p
+        className={`mt-6 max-w-2xl text-center font-mono text-sm leading-relaxed text-slate-400 transition-all duration-700 ease-out md:text-lg ${
+          inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+        }`}
+        style={{ transitionDelay: inView ? "150ms" : "0ms" }}
+      >
         Need help creating a website, a quick micro-job, or just a question?
         Please contact me via WhatsApp. I'll respond to your message as soon as
         possible during business hours!
       </p>
 
-      <div className="flex flex-col gap-6 w-full max-w-xs mx-auto">
-        {/* Tombol WhatsApp */}
-        <div className="flex justify-center w-full">
-          <a
-            href="https://wa.me/6283896738779"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative flex items-center justify-center rounded-xl  w-full p-5 h-14 gap-4 bg-[#25D366] text-white font-bold transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]  hover:shadow-[0_0_35px_rgba(37,211,102,0.6)]"
-          >
-            <FaWhatsapp size={26} />
-            <span className="relative z-10">Chat via WhatsApp</span>
+      {/* Contact Buttons */}
+      <div className="mt-12 flex w-full max-w-xs flex-col gap-4">
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/6283896738779"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            transitionDelay: inView ? "300ms" : "0ms",
+          }}
+          className={`group relative flex h-14 w-full items-center justify-center gap-4 overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] px-5 font-mono text-sm font-medium text-slate-300 backdrop-blur-sm transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#25D366]/40 hover:bg-[#25D366]/5 hover:text-white hover:shadow-[0_0_25px_rgba(37,211,102,0.2)] ${
+            inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+          }`}
+        >
+          <FaWhatsapp
+            size={24}
+            className="text-[#25D366] transition-transform duration-300 group-hover:scale-110"
+          />
 
-            <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-40 blur-xl bg-[#25D366] transition-opacity"></div>
-          </a>
-        </div>
+          <span>Chat via WhatsApp</span>
 
-        <div className="flex justify-center w-full">
-          <a
-            href="https://github.com/yafigian3-hue"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative flex items-center justify-center rounded-xl w-full p-5 h-14 gap-4 bg-[#24292e] text-white font-bol border border-gray-600 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_35px_rgba(255,255,255,0.2)]"
-          >
-            <SiGithub size={26} />
-            <span className="relative z-10">View Code on GitHub</span>
+          <div className="pointer-events-none absolute inset-0 -z-10 rounded-lg bg-[#25D366] opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-20" />
+        </a>
 
-            <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 blur-xl bg-white transition-opacity"></div>
-          </a>
-        </div>
+        {/* GitHub */}
+        <a
+          href="https://github.com/yafigian3-hue"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            transitionDelay: inView ? "400ms" : "0ms",
+          }}
+          className={`group relative flex h-14 w-full items-center justify-center gap-4 overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] px-5 font-mono text-sm font-medium text-slate-300 backdrop-blur-sm transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#3B82F6]/40 hover:bg-white/[0.04] hover:text-white hover:shadow-[0_0_25px_rgba(59,130,246,0.2)] ${
+            inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+          }`}
+        >
+          <SiGithub
+            size={24}
+            className="text-white transition-transform duration-300 group-hover:scale-110"
+          />
+
+          <span>View Code on GitHub</span>
+
+          <div className="pointer-events-none absolute inset-0 -z-10 rounded-lg bg-white opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-10" />
+        </a>
       </div>
     </section>
   );
 }
 
-export default contact;
+export default Contact;
