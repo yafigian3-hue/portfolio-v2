@@ -1,4 +1,5 @@
-import { Icon } from "lucide-react";
+"use client";
+
 import {
   SiHtml5,
   SiCss3,
@@ -9,6 +10,7 @@ import {
   SiGit,
   SiGithub,
 } from "react-icons/si";
+import { useInView } from "../hooks/useInView";
 
 const techStack = [
   { name: "HTML", icon: SiHtml5, color: "#E34F26" },
@@ -21,37 +23,59 @@ const techStack = [
   { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
 ];
 
-function stack() {
+function Stack() {
+  const { ref, inView } = useInView<HTMLDivElement>(0.2);
+
   return (
-    <div className="mt-20">
-      <h2 className="text-4xl text-center md:text-5xl text-[#3B82F6] font-mono font-bold">
-        Tech Stack
-      </h2>
+    <div ref={ref} className="mt-20">
+      {/* Heading */}
+      <div
+        className={`text-center transition-all duration-700 ease-out ${
+          inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+        }`}
+      >
+        <h3 className="mt-3 font-sans text-4xl font-extrabold tracking-tight text-white md:text-5xl">
+          Tech <span className="text-[#3B82F6]">Stack</span>
+        </h3>
+      </div>
 
-      <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto mt-8 px-6">
-        {techStack.map(({ name, icon: Icon, color }) => (
-          <div
-            key={name}
-            className="group relative flex items-center justify-center rounded-xl w-auto p-5 h-12 gap-1 grid-cols-3 border-[#3B82F6] border-[1px] shadow-[0_0_35px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_35px_rgba(59,130,246,0.7)]"
-          >
-            <Icon
-              style={{ color: color }}
-              className="text-2xl transition-transform duration-300 group-hover:scale-110"
-            />
+      {/* Tech Stack */}
+      <div className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-4 px-6 md:gap-5">
+        {techStack.map(({ name, icon: Icon, color }, index) => {
+          const delay = index * 100;
 
-            <span className="text-sm font-mono text-gray-400 group-hover:text-white transition-colors">
-              {name}
-            </span>
-
+          return (
             <div
-              className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity blur-xl"
-              style={{ backgroundColor: color }}
-            ></div>
-          </div>
-        ))}
+              key={name}
+              style={{
+                transitionDelay: inView ? `${delay}ms` : "0ms",
+              }}
+              className={`group relative flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.02] px-5 py-3 backdrop-blur-sm transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#3B82F6]/40 hover:bg-white/[0.04] ${
+                inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+              }`}
+            >
+              {/* Icon */}
+              <Icon
+                style={{ color }}
+                className="text-xl transition-transform duration-300 group-hover:scale-110"
+              />
+
+              {/* Name */}
+              <span className="font-mono text-sm text-slate-400 transition-colors duration-300 group-hover:text-white">
+                {name}
+              </span>
+
+              {/* Subtle glow */}
+              <div
+                className="pointer-events-none absolute inset-0 -z-10 rounded-lg opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-20"
+                style={{ backgroundColor: color }}
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 }
 
-export default stack;
+export default Stack;
