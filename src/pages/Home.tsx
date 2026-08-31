@@ -72,7 +72,6 @@ function useTypewriterLoop(
 }
 
 function Home() {
-  // threshold rendah karena Hero selalu terlihat penuh saat halaman dibuka
   const { ref: contentRef, inView: contentInView } =
     useInView<HTMLDivElement>(0.1);
   const { ref: visualRef, inView: visualInView } =

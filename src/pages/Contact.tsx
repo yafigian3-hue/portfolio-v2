@@ -24,10 +24,7 @@ function contact() {
             href="https://wa.me/6283896738779"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex items-center justify-center rounded-xl 
-                       w-full p-5 h-14 gap-4 bg-[#25D366] text-white font-bold
-                       transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] 
-                       hover:shadow-[0_0_35px_rgba(37,211,102,0.6)]"
+            className="group relative flex items-center justify-center rounded-xl  w-full p-5 h-14 gap-4 bg-[#25D366] text-white font-bold transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]  hover:shadow-[0_0_35px_rgba(37,211,102,0.6)]"
           >
             <FaWhatsapp size={26} />
             <span className="relative z-10">Chat via WhatsApp</span>
@@ -41,10 +38,7 @@ function contact() {
             href="https://github.com/yafigian3-hue"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex items-center justify-center rounded-xl 
-                       w-full p-5 h-14 gap-4 bg-[#24292e] text-white font-bold
-                       border border-gray-600 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] 
-                       hover:shadow-[0_0_35px_rgba(255,255,255,0.2)]"
+            className="group relative flex items-center justify-center rounded-xl w-full p-5 h-14 gap-4 bg-[#24292e] text-white font-bol border border-gray-600 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_35px_rgba(255,255,255,0.2)]"
           >
             <SiGithub size={26} />
             <span className="relative z-10">View Code on GitHub</span>

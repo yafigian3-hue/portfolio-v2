@@ -1,3 +1,5 @@
+"use client";
+
 import { Home, User, Folder, Mail, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -10,6 +12,11 @@ const navLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -21,7 +28,6 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleResize = () => {
-      // Breakpoint disamakan dengan breakpoint nav desktop (lg)
       if (window.innerWidth >= 1024) {
         setOpen(false);
       }
@@ -36,20 +42,37 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 z-40 w-full">
+      <header
+        className={`fixed top-0 z-40 w-full transition-all duration-700 ease-out ${
+          mounted ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        }`}
+      >
         <nav className="flex h-16 items-center justify-between border-b border-white/5 bg-black/30 px-6 backdrop-blur-xl sm:px-8 md:px-10 lg:px-16 xl:px-20">
           {/* Logo */}
           <a
             href="#home"
-            className="font-mono text-xl font-extrabold text-[#3B82F6] drop-shadow-[0_0_10px_rgba(59,130,246,0.8)] transition-all duration-300 hover:text-[#478dff] sm:text-2xl lg:text-3xl"
+            className={`font-sans text-2xl font-extrabold tracking-tight text-white transition-all duration-700 ease-out ${
+              mounted ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
+            }`}
+            style={{ transitionDelay: mounted ? "150ms" : "0ms" }}
           >
-            YafiDEV
+            Yafi<span className="text-[#3B82F6]">DEV</span>
           </a>
 
-          {/* Desktop Navigation — muncul mulai lg supaya tidak sempit di tablet */}
+          {/* Desktop Navigation */}
           <ul className="hidden items-center gap-5 lg:flex xl:gap-8">
-            {navLinks.map(({ name, icon: Icon, href }) => (
-              <li key={name}>
+            {navLinks.map(({ name, icon: Icon, href }, index) => (
+              <li
+                key={name}
+                className={`transition-all duration-500 ease-out ${
+                  mounted
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-3 opacity-0"
+                }`}
+                style={{
+                  transitionDelay: mounted ? `${250 + index * 80}ms` : "0ms",
+                }}
+              >
                 <a
                   href={href}
                   className="group relative flex items-center gap-2 text-base text-slate-300 transition-colors duration-300 hover:text-white xl:text-lg"
@@ -67,15 +90,21 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <a
             href="#contact"
-            className="hidden rounded-lg border border-[#3B82F6]/50 px-4 py-2 text-sm font-medium text-[#60A5FA] transition-all duration-300 hover:border-[#3B82F6] hover:bg-[#3B82F6]/10 hover:text-white hover:shadow-[0_0_15px_rgba(59,130,246,0.25)] lg:block"
+            className={`hidden rounded-lg border border-[#3B82F6]/50 px-4 py-2 text-sm font-medium text-[#60A5FA] transition-all duration-700 ease-out hover:border-[#3B82F6] hover:bg-[#3B82F6]/10 hover:text-white hover:shadow-[0_0_15px_rgba(59,130,246,0.25)] lg:block ${
+              mounted ? "translate-x-0 opacity-100" : "translate-x-4 opacity-0"
+            }`}
+            style={{ transitionDelay: mounted ? "600ms" : "0ms" }}
           >
             Let's Talk
           </a>
 
-          {/* Mobile / Tablet Menu Button — aktif sampai sebelum lg */}
+          {/* Mobile Menu Button */}
           <button
             type="button"
-            className="rounded-lg p-2 text-slate-300 transition-colors duration-300 hover:bg-white/5 hover:text-white lg:hidden"
+            className={`rounded-lg p-2 text-slate-300 transition-all duration-700 ease-out hover:bg-white/5 hover:text-white lg:hidden ${
+              mounted ? "translate-x-0 opacity-100" : "translate-x-4 opacity-0"
+            }`}
+            style={{ transitionDelay: mounted ? "300ms" : "0ms" }}
             onClick={() => setOpen((prev) => !prev)}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
@@ -106,7 +135,6 @@ export default function Navbar() {
             open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
           }`}
         >
-          {/* Grid 2 kolom untuk tablet supaya tidak jadi list panjang ke bawah */}
           <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3">
             {navLinks.map(({ name, icon: Icon, href }) => (
               <li key={name}>
